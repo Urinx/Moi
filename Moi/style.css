@@ -1,0 +1,441 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+  font-family: 'weathericons';
+  src: url("fonts/weathericons-regular-webfont.eot");
+  src: url("fonts/weathericons-regular-webfont.woff") format("woff"), url("fonts/weathericons-regular-webfont.ttf") format("truetype"), url("fonts/weathericons-regular-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html, body {
+  background-color: #5F7462;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.device {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.device section {
+  height: calc(100% - 60px);
+  width: 100%;
+  overflow: hidden;
+  background-color: #644749;
+}
+.device header{
+  height: 60px;
+  background-color: #8ba892;
+}
+.address{
+  font-family: 'Lato', sans-serif;
+  color: white;
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 40px;
+  position: relative;
+  top: 20px;
+}
+.address:before{
+  content: '';
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  background-image: url('data:image/png;base64,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');
+}
+
+.weather {
+  height: 18%;
+  overflow: hidden;
+}
+.weather, .icon {
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+}
+.weather.active {
+  height: 45%;
+}
+.weather.active .icon{
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  z-index: 1;
+}
+.weather.active + .weather .icon{
+  -webkit-transform: translateY(-408px);
+      -ms-transform: translateY(-408px);
+          transform: translateY(-408px);
+}
+.weather.active ~ .weather .icon{
+  z-index: -1;
+}
+.weather.active .data{
+  -webkit-animation-name: slide-up;
+          animation-name: slide-up;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.weather .content {
+  right: 0;
+  width: 40%;
+  position: absolute;
+  color: white;
+}
+.meta, .weather .content {
+  font-family: 'Lato', sans-serif;
+}
+.weather h3 {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.weather h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.weather .degrees {
+  font-size: 2.7rem;
+  font-weight: 300;
+  color: white;
+  line-height: 1;
+}
+.weather .degrees:after {
+  content: '\00b0';
+}
+
+.icon {
+  z-index: -1;
+  font-family: 'weathericons';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 50%;
+  height: 50px;
+  -webkit-transform: translateY(136px);
+      -ms-transform: translateY(136px);
+          transform: translateY(136px);
+}
+.icon i {
+  font-style: normal;
+  position: absolute;
+}
+
+.cloud {
+  right: 0;
+  top: 70px;
+  width: 90%;
+  height: 60px;
+  background: black;
+  border-radius: 50px;
+}
+.cloud:before, .cloud:after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+.cloud:before {
+  width: 80px;
+  height: 80px;
+  background: black;
+  bottom: 20px;
+  right: 20px;
+}
+.cloud:after {
+  width: 50px;
+  height: 50px;
+  background: black;
+  bottom: 30px;
+  left: 30px;
+}
+
+.sun {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.moon, .sun {
+  left: 5px;
+  font-size: 6rem;
+}
+.sun:before {
+  content: "\f00d";
+}
+
+.moon:before {
+  content: "\f07b";
+}
+
+.sprinkles {
+  -webkit-transform: skewX(-20deg);
+      -ms-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+  right: 30px;
+  top: 100px;
+  z-index: -1;
+  -webkit-animation-name: sprinkle;
+          animation-name: sprinkle;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  color: #e3bb88;
+}
+.sprinkles + .sprinkles {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+.sprinkles + .sprinkles + .sprinkles {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.sprinkles + .sprinkles + .sprinkles + .sprinkles {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+.sprinkles:before {
+  font-size: 3rem;
+  content: "\f04e \f04e \f04e \f04e \f04e";
+}
+
+.snowflakes {
+  position: absolute;
+  top: 70px;
+  width: 70%;
+  right: 0;
+  -webkit-animation: snowflakes 3s linear infinite;
+          animation: snowflakes 3s linear infinite;
+}
+.snowflakes .snowflake {
+  position: relative;
+  display: inline-block;
+}
+
+.snowflake {
+  color: #d89864;
+}
+.snowflake:nth-child(1) {
+  -webkit-animation: snowflake 3.1s ease-in-out infinite;
+          animation: snowflake 3.1s ease-in-out infinite;
+}
+.snowflake:nth-child(2) {
+  -webkit-animation: snowflake 3.1s 0.2s ease-in-out infinite reverse;
+          animation: snowflake 3.1s 0.2s ease-in-out infinite reverse;
+  top: -20px;
+}
+.snowflake:nth-child(3) {
+  -webkit-animation: snowflake 3.1s 0.2s ease-in-out infinite;
+          animation: snowflake 3.1s 0.2s ease-in-out infinite;
+  top: 10px;
+}
+.snowflake:nth-child(4) {
+  -webkit-animation: snowflake 3.1s 0.4s ease-in-out infinite reverse;
+          animation: snowflake 3.1s 0.4s ease-in-out infinite reverse;
+  top: -30px;
+}
+.snowflake:before {
+  font-size: 3rem;
+  content: "\f076";
+}
+
+.time-morning {
+  background-color: #e3bb88;
+}
+.time-morning .sun {
+  color: #d89864;
+}
+.time-day {
+  background-color: #d89864;
+}
+.time-day .sun {
+  color: #b1695a;
+}
+.time-day .cloud, .time-day .cloud:before, .time-day .cloud:after {
+  background-color: #644749;
+}
+.time-evening {
+  background-color: #b1695a;
+}
+.time-evening .sun {
+  color: #644749;
+}
+.time-evening .cloud, .time-evening .cloud:before, .time-evening .cloud:after {
+  background-color: #e3bb88;
+}
+.time-night {
+  background-color: #644749;
+}
+.time-night .moon {
+  color: #e3bb88;
+}
+.time-night .cloud, .time-night .cloud:before, .time-night .cloud:after {
+  background-color: #d89864;
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes sprinkle {
+  from {
+    -webkit-transform: translateX(0) translateY(0) skewX(-10deg);
+            transform: translateX(0) translateY(0) skewX(-10deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateX(-70px) translateY(150px) skewX(-10deg);
+            transform: translateX(-70px) translateY(150px) skewX(-10deg);
+    opacity: 0;
+  }
+}
+@keyframes sprinkle {
+  from {
+    -webkit-transform: translateX(0) translateY(0) skewX(-10deg);
+            transform: translateX(0) translateY(0) skewX(-10deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateX(-70px) translateY(150px) skewX(-10deg);
+            transform: translateX(-70px) translateY(150px) skewX(-10deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes snowflakes {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@keyframes snowflakes {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes snowflake {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes snowflake {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
