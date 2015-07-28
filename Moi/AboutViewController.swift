@@ -39,6 +39,23 @@ class AboutViewController: UIViewController {
         controller.addImage(UIImage(named: "shareImg"))
         self.presentViewController(controller, animated: true, completion: nil)
     }
+    func sendLinkContent(_scene: Int32, title: String){
+        let message =  WXMediaMessage()
+        
+        message.title = title
+        message.description = "不给人生留遗憾，不想错过每一天"
+        message.setThumbImage(UIImage(named:"shareImg"))
+        
+        let ext =  WXWebpageObject()
+        ext.webpageUrl = "http://urinx.github.io/app/moi/"
+        message.mediaObject = ext
+        
+        let req =  SendMessageToWXReq()
+        req.bText = false
+        req.message = message
+        req.scene = _scene
+        WXApi.sendReq(req)
+    }
     
     @IBAction func twitterTapped(sender: AnyObject) {
         share(forServiceType: SLServiceTypeTwitter)
@@ -47,8 +64,10 @@ class AboutViewController: UIViewController {
         share(forServiceType: SLServiceTypeSinaWeibo)
     }
     @IBAction func wechatTapped(sender: AnyObject) {
+        sendLinkContent(WXSceneSession.rawValue, title: "Moi - 天気予報")
     }
     @IBAction func wechatCircleTapped(sender: AnyObject) {
+        sendLinkContent(WXSceneTimeline.rawValue, title: "不给人生留遗憾，不想错过每一天")
     }
     
     @IBAction func close(segue:UIStoryboardSegue) {

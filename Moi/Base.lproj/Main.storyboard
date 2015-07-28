@@ -31,7 +31,7 @@
                     </view>
                     <connections>
                         <outlet property="jumpImg" destination="E1H-7G-PWC" id="j26-Ls-ght"/>
-                        <outlet property="webView" destination="eNW-xE-Ty6" id="JQ8-SN-g25"/>
+                        <outlet property="webView" destination="eNW-xE-Ty6" id="gkF-pw-ygc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

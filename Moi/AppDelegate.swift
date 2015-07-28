@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Moi
-//
-//  Created by Eular on 15/7/26.
-//  Copyright © 2015年 Eular. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -16,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        // WXApi.registerApp("hangge_appid")
+        WXApi.registerApp("wx6ce27f873491731b")
         sleep(2)
         return true
     }

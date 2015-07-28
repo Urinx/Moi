@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
+    
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var jumpImg: UIButton!
     
