@@ -11,12 +11,16 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var jumpImg: UIButton!
     
     let locationManager:CLLocationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.jumpImg.transform = CGAffineTransformMakeScale(0, 0)
+        
         let appFile = NSBundle.mainBundle().URLForResource("app", withExtension: "html")
         let localRequest = NSURLRequest(URL: appFile!)
         self.webView.loadRequest(localRequest)
@@ -40,6 +44,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             print("lat: \(latitude) lon: \(longitude)")
             // self.webView.stringByEvaluatingJavaScriptFromString("alert(1)")
         }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(0.3, delay: 0.8, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.jumpImg.transform = CGAffineTransformScale(self.jumpImg.transform, 0.5, 0.5)
+            self.jumpImg.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+            }, completion: {
+                _ in
+                UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                    self.jumpImg.transform = CGAffineTransformScale(self.jumpImg.transform, 1, 1)
+                    self.jumpImg.transform = CGAffineTransformRotate(self.jumpImg.transform, CGFloat(M_PI))
+                    }, completion: nil)
+        })
     }
 
     override func didReceiveMemoryWarning() {

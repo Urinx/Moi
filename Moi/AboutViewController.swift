@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class AboutViewController: UIViewController {
 
@@ -31,6 +32,24 @@ class AboutViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func share(forServiceType shareMethod: String){
+        let controller: SLComposeViewController = SLComposeViewController(forServiceType: shareMethod)
+        controller.setInitialText("我在使用 Moi 天気予報，不给人生留遗憾，不再错过每一天。http://urinx.github.io/app/moi/")
+        controller.addImage(UIImage(named: "shareImg"))
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    @IBAction func twitterTapped(sender: AnyObject) {
+        share(forServiceType: SLServiceTypeTwitter)
+    }
+    @IBAction func sinaTapped(sender: AnyObject) {
+        share(forServiceType: SLServiceTypeSinaWeibo)
+    }
+    @IBAction func wechatTapped(sender: AnyObject) {
+    }
+    @IBAction func wechatCircleTapped(sender: AnyObject) {
+    }
     
     @IBAction func close(segue:UIStoryboardSegue) {
         self.dismissViewControllerAnimated(true, completion: nil)

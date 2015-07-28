@@ -30,6 +30,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="jumpImg" destination="E1H-7G-PWC" id="j26-Ls-ght"/>
                         <outlet property="webView" destination="eNW-xE-Ty6" id="JQ8-SN-g25"/>
                     </connections>
                 </viewController>
@@ -121,21 +122,33 @@
                                 <rect key="frame" x="20" y="456" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="icon_twitter"/>
+                                <connections>
+                                    <action selector="twitterTapped:" destination="SAv-75-bd8" eventType="touchUpInside" id="zBV-Xo-GtR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PCd-d0-Tvk">
                                 <rect key="frame" x="80" y="484" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="icon_weibo_normal"/>
+                                <connections>
+                                    <action selector="sinaTapped:" destination="SAv-75-bd8" eventType="touchUpInside" id="res-RF-Jed"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fwi-UI-asv">
                                 <rect key="frame" x="194" y="484" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="icon_wechat_normal"/>
+                                <connections>
+                                    <action selector="wechatTapped:" destination="SAv-75-bd8" eventType="touchUpInside" id="ZQH-Sn-9um"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zhM-cR-eFW">
                                 <rect key="frame" x="254" y="456" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="icon_wechatcircle_normal"/>
+                                <connections>
+                                    <action selector="wechatCircleTapped:" destination="SAv-75-bd8" eventType="touchUpInside" id="h97-H9-cBm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
