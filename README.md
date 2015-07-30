@@ -1,5 +1,5 @@
 # Moi
-天気予報 - iOS Weather App [![Project page](go.png)(http://urinx.github.io/app/moi/)
+天気予報 - iOS Weather App [![Project page](go.png)](http://urinx.github.io/app/moi/)
 
 ![App Screenshot](App_Screenshot.png)
 
