@@ -47,7 +47,7 @@ class AboutViewController: UIViewController {
         message.setThumbImage(UIImage(named:"shareImg"))
         
         let ext =  WXWebpageObject()
-        ext.webpageUrl = "http://urinx.github.io/app/moi/"
+        ext.webpageUrl = "http://pre.im/40fb"
         message.mediaObject = ext
         
         let req =  SendMessageToWXReq()
@@ -64,7 +64,7 @@ class AboutViewController: UIViewController {
         share(forServiceType: SLServiceTypeSinaWeibo)
     }
     @IBAction func wechatTapped(sender: AnyObject) {
-        sendLinkContent(WXSceneSession.rawValue, title: "Moi - 天気予報")
+        sendLinkContent(WXSceneSession.rawValue, title: "我在使用 Moi - 天気予報")
     }
     @IBAction func wechatCircleTapped(sender: AnyObject) {
         sendLinkContent(WXSceneTimeline.rawValue, title: "不给人生留遗憾，不想错过每一天")

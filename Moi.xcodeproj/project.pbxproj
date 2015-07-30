@@ -14,10 +14,11 @@
 		5A51C9F51B25CE8B008C4598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A51C9F31B25CE8B008C4598 /* LaunchScreen.storyboard */; };
 		5A51CA0E1B25CEBB008C4598 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A51CA0B1B25CEBB008C4598 /* libWeChatSDK.a */; };
 		BB1624DE1B67D94D00258DAB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1624DD1B67D94D00258DAB /* AboutViewController.swift */; };
-		BB9DF1C11B67DA0F009B1320 /* app.html in Resources */ = {isa = PBXBuildFile; fileRef = BB9DF1BE1B67DA0F009B1320 /* app.html */; };
-		BB9DF1C21B67DA0F009B1320 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = BB9DF1BF1B67DA0F009B1320 /* app.js */; };
+		BB9D74E81B6A487000525474 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = BB9D74E71B6A487000525474 /* app.js */; };
+		BB9D74EA1B6A491E00525474 /* app.html in Resources */ = {isa = PBXBuildFile; fileRef = BB9D74E91B6A491E00525474 /* app.html */; };
 		BB9DF1C31B67DA0F009B1320 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = BB9DF1C01B67DA0F009B1320 /* style.css */; };
 		BB9DF1C51B67DA18009B1320 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = BB9DF1C41B67DA18009B1320 /* fonts */; };
+		BBCBBF441B68E7A5008E39F4 /* sound in Resources */ = {isa = PBXBuildFile; fileRef = BBCBBF431B68E7A5008E39F4 /* sound */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +44,11 @@
 		5A51CA0C1B25CEBB008C4598 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		5A51CA0D1B25CEBB008C4598 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		BB1624DD1B67D94D00258DAB /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		BB9DF1BE1B67DA0F009B1320 /* app.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.html; sourceTree = "<group>"; };
-		BB9DF1BF1B67DA0F009B1320 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
+		BB9D74E71B6A487000525474 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
+		BB9D74E91B6A491E00525474 /* app.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.html; sourceTree = "<group>"; };
 		BB9DF1C01B67DA0F009B1320 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		BB9DF1C41B67DA18009B1320 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		BBCBBF431B68E7A5008E39F4 /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sound; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +97,10 @@
 				5A51C9EE1B25CE8B008C4598 /* Main.storyboard */,
 				5A51C9F11B25CE8B008C4598 /* Assets.xcassets */,
 				5A51C9F31B25CE8B008C4598 /* LaunchScreen.storyboard */,
-				BB9DF1BE1B67DA0F009B1320 /* app.html */,
-				BB9DF1BF1B67DA0F009B1320 /* app.js */,
+				BB9D74E91B6A491E00525474 /* app.html */,
+				BB9D74E71B6A487000525474 /* app.js */,
 				BB9DF1C01B67DA0F009B1320 /* style.css */,
+				BBCBBF431B68E7A5008E39F4 /* sound */,
 				BB9DF1C41B67DA18009B1320 /* fonts */,
 				5A51C9E81B25CE8B008C4598 /* Supporting Files */,
 			);
@@ -204,12 +207,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB9DF1C21B67DA0F009B1320 /* app.js in Resources */,
 				BB9DF1C31B67DA0F009B1320 /* style.css in Resources */,
-				BB9DF1C11B67DA0F009B1320 /* app.html in Resources */,
+				BB9D74E81B6A487000525474 /* app.js in Resources */,
 				BB9DF1C51B67DA18009B1320 /* fonts in Resources */,
 				5A51C9F01B25CE8B008C4598 /* Main.storyboard in Resources */,
+				BB9D74EA1B6A491E00525474 /* app.html in Resources */,
 				5A51C9F51B25CE8B008C4598 /* LaunchScreen.storyboard in Resources */,
+				BBCBBF441B68E7A5008E39F4 /* sound in Resources */,
 				5A51C9F21B25CE8B008C4598 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
